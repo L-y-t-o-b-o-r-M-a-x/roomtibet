@@ -1,0 +1,30 @@
+.btn {
+  padding: 16px 36px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.192px;
+  color: var(--white);
+  background-color: var(--dark-green);
+  transition: background-color .3s ease, color .3s ease;
+
+  &:hover {
+    border: 1px solid var(--dark-green);
+    color: var(--dark-green);
+    background-color: var(--white);
+  }
+
+}
+
+.btn--header {
+  // padding: 12px 24px;
+  padding: 14px 21px 11px 23px;
+  transition: background-color .3s ease, color .3s ease, padding .3s ease-in-out;
+
+  &:active {
+    padding: 16px 36px;
+    color: var(--white);
+    background-color: var(--dark-green);
+  }
+}

@@ -1,0 +1,29 @@
+.header {
+  padding-top: 15px;
+  padding-bottom: 20px;
+  background-color: var(--bg-gray);
+
+  &__container {
+    @include flex-all-sb;
+  }
+
+  &__logo {
+    margin-right: 25px;
+  }
+
+  &__nav {
+    @include  flex-v-center;
+  }
+
+  &__nav-list {
+    margin-right: 47px;
+
+    @include small-desktop {
+      margin-right: 15px;
+    }
+  }
+
+
+
+
+}
