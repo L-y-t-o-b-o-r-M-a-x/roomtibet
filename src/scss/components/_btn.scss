@@ -18,7 +18,6 @@
 }
 
 .btn--header {
-  // padding: 12px 24px;
   padding: 14px 21px 11px 23px;
   transition: background-color .3s ease, color .3s ease, padding .3s ease-in-out;
 
@@ -26,5 +25,9 @@
     padding: 16px 36px;
     color: var(--white);
     background-color: var(--dark-green);
+  }
+
+  @include tablet {
+    display: none;
   }
 }

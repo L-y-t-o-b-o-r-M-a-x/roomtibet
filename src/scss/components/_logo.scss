@@ -1,4 +1,9 @@
 .logo {
   @include flex;
   flex-shrink: 0;
+
+  @include mobile {
+    width: 84px;
+    height: 44px;
+  }
 }

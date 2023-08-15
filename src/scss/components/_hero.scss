@@ -1,0 +1,23 @@
+.hero {
+  position: relative;
+  padding-top: 551px;
+  padding-bottom: 82px;
+  background-image: url(../../img/hero-bg.jpg);
+  @include bg-cover;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: var(--bg-gray);
+
+  &__title {
+    max-width: 1080px;
+    margin: 0;
+    font-family: "Nextart";
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 150%;
+    letter-spacing: 1px;
+    color: var(--white);
+  }
+
+}

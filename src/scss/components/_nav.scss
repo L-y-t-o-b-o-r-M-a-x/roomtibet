@@ -2,19 +2,118 @@
   &__list {
     @include flex-v-center;
     flex-wrap: wrap;
+
+    @include tablet {
+      flex-direction: column;
+      align-items: flex-start;
+      row-gap: 25px;
+    }
+
+    @include mobile {
+      row-gap: 15px;
+    }
   }
 
   &__item {
     &:not(:last-child) {
       margin-right: 21px;
     }
+
+    @include tablet {
+      margin-right: 0;
+    }
+  }
+
+  @include tablet {
+    &__item--none {
+      display: none;
+    }
   }
 
   &__link {
+    position: relative;
     font-weight: 600;
     font-size: 18px;
     line-height: normal;
     font-style: normal;
     color: var(--white);
+    outline: none;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 1px;
+      border-bottom: 2px solid var(--yellow);
+      transform: scaleX(0);
+      transition: transform .3s ease;
+    }
+
+    &:focus::after {
+      transform: scaleX(1);
+    }
+
+    &:hover {
+      color: var(--yellow);
+    }
+
+    &:active {
+      color: var(--yellow);
+    }
+
+    &:active::after {
+      transform: scaleX(0);
+    }
+
+    @include tablet {
+      padding-left: 18px;
+      font-size: 22px;
+      transition: color .3s ease;
+
+      &::after {
+        width: calc(100% - 18px);
+        border-bottom: 1px solid var(--yellow);
+
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 10px;
+        left: -10px;
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-right: 2px solid;
+        border-bottom: 2px solid;
+        transform: rotate(-45deg);
+        transition: color .3s ease;
+      }
+    }
+
+    &:hover::before {
+      color: var(--yellow);
+    }
+
+    &:hover:not(:active)::after {
+      transform: scaleX(1);
+    }
+
+    @include mobile {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 18px;
+
+      &::before {
+        top: 6px;
+        left: 0;
+        width: 6px;
+        height: 6px;
+        border-right: 1px solid;
+        border-bottom: 1px solid;
+      }
+    }
   }
 }

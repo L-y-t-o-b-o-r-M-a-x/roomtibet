@@ -4,9 +4,9 @@
       <img src="img/logo.svg" alt="Логотип РумТибет">
     </a>
     <div class="header__nav">
-      <nav class="nav header__nav-list">
+      <nav class="nav header__nav-list" data-menu>
         <ul class="list-reset nav__list">
-          <li class="nav__item"><a class="nav__link" href="#">Главная</a></li>
+          <li class="nav__item nav__item--none"><a class="nav__link" href="#">Главная</a></li>
           <li class="nav__item"><a class="nav__link" href="#">Про гида</a></li>
           <li class="nav__item"><a class="nav__link" href="#">Программа тура</a></li>
           <li class="nav__item"><a class="nav__link" href="#">Стоимость</a></li>
@@ -16,6 +16,8 @@
       </nav>
       <button class="btn btn--header btn-reset">Консультация</button>
     </div>
-
+    <button class="btn-reset burger" aria-label="Открыть меню" aria-expanded="false" data-burger>
+      <span class="burger__line"></span>
+    </button>
   </div>
 </header>
