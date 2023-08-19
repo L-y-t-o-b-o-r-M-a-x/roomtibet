@@ -1,7 +1,26 @@
 <section class="hero">
-  <div class="container hero__container">
+  <div class="container">
     <h1 class="hero__title">
       Насладись прогулкой в горах с командой единомышленников
     </h1>
+    <form class="programs" action="#" method="POST">
+      <div class="programs__select-wrapper">
+        <select class="programs__select" name="location">
+          <option value="tour" disabled selected>Локация для тура</option>
+        </select>
+        <span class="programs__text">выберите из списка</span>
+      </div>
+      <label class="programs__label">
+        <input class="programs__input" type="date" name="meeting-date">
+        <span class="programs__text">укажите диапазон</span>
+      </label>
+      <div class="programs__select-wrapper">
+        <select class="programs__select" name="members">
+          <option value="quantity" disabled selected>Участники</option>
+        </select>
+        <span class="programs__text">минимум 4 человека</span>
+      </div>
+      <button class="programs__btn btn-reset" type="submit">Найти программу</button>
+    </form>
   </div>
 </section>

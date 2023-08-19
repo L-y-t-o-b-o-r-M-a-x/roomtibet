@@ -19,6 +19,7 @@
     "@babel/preset-env": "^7.16.7",
     "babel-loader": "^8.2.3",
     "browser-sync": "^2.26.14",
+    "choices.js": "^10.2.0",
     "del": "^6.0.0",
     "editorconfig-checker": "^4.0.1",
     "gulp": "^4.0.2",

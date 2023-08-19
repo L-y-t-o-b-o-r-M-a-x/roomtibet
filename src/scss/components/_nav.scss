@@ -16,7 +16,7 @@
 
   &__item {
     &:not(:last-child) {
-      margin-right: 21px;
+      margin-right: 25px;
     }
 
     @include tablet {
@@ -75,7 +75,6 @@
       &::after {
         width: calc(100% - 18px);
         border-bottom: 1px solid var(--yellow);
-
       }
 
       &::before {
@@ -105,6 +104,10 @@
       font-weight: 400;
       font-size: 14px;
       line-height: 18px;
+
+      &::after {
+        bottom: 3px;
+      }
 
       &::before {
         top: 6px;

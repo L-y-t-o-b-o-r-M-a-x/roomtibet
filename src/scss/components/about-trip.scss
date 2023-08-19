@@ -1,0 +1,28 @@
+.about-trip {
+  padding-top: 165px;
+  padding-bottom: 100px;
+
+  &__container {
+    @include flex-sb;
+  }
+
+  &__video {
+    position: relative;
+    display: flex;
+  }
+
+  &__video-block {
+    position: absolute;
+  }
+
+  &__content {
+    @include flex-column;
+
+    max-width: 580px;
+  }
+
+  &__btn {
+    align-self: flex-start;
+  }
+
+}

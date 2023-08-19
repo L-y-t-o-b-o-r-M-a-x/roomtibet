@@ -1,0 +1,139 @@
+.programs {
+  @include flex-all-sb;
+
+  padding: 40px 42px;
+  border-radius: 10px;
+  backdrop-filter: blur(3px);
+  background-color: rgba(255, 255, 255, 0.2);
+
+  &__select-wrapper {
+    @include flex-column;
+
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 18px;
+      right: 21px;
+      width: 10px;
+      height: 10px;
+      border-right: 1px solid var(--white);
+      border-bottom: 1px solid var(--white);
+      transform: rotate(45deg);
+      pointer-events: none;
+    }
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+
+  &__select {
+    width: 270px;
+    height: 52px;
+    padding: 14px 16px;
+    margin-bottom: 8px;
+    border: none;
+    border: 1px solid var(--light-color-border);
+    border-radius: 8px;
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 150%;
+    background-color: inherit;
+    appearance: none;
+    transition: background-color .3s ease;
+
+    &:focus {
+      outline: 1px solid var(--yellow);
+      outline-offset: 3px;
+    }
+
+    &:hover {
+      // opacity: 0.6;
+      background-color: rgba(255, 255, 255, 0.6);
+    }
+  }
+
+  &__label {
+    @include flex-column;
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__input {
+    width: 270px;
+    height: 52px;
+    padding: 14px 16px;
+    margin-bottom: 8px;
+    border: none;
+    border: 1px solid var(--light-color-border);
+    border-radius: 8px;
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 150%;
+    background-color: inherit;
+    transition: background-color .3s ease;
+
+    &:focus {
+      outline: 1px solid var(--yellow);
+      outline-offset: 3px;
+    }
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.6);
+    }
+  }
+
+  &__text {
+    padding-left: 9px;
+    color: var(--white);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 150%;
+  }
+
+  &__btn {
+    align-self: flex-start;
+    padding: 16px 36px;
+    border-radius: 4px;
+    color: var(--dark-green);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0.192px;
+    background-color: var(--white);
+    transition: color .3s ease, background-color .3s ease;
+
+    &:focus {
+      outline: 1px solid var(--yellow);
+      outline-offset: 3px;
+    }
+
+    &:hover {
+      color: var(--white);
+      background-color: var(--dark-green);
+    }
+
+    &:active {
+      color: var(--yellow);
+    }
+  }
+
+  @include small-desktop {
+    align-items: flex-start;
+    flex-direction: column;
+    row-gap: 20px;
+    width: 65%;
+  }
+
+  @include mobile {
+    padding: 0;
+    background-color: transparent;
+  }
+}

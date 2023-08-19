@@ -1,1 +1,4 @@
-console.log('components');
+// Подключение компонентов
+import './components/programs-select';
+import './components/video';
+

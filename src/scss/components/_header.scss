@@ -7,7 +7,7 @@
   z-index: 50;
   margin: auto;
   bottom: auto;
-  padding-top: 15px;
+  padding-top: 16px;
   padding-bottom: 20px;
 
   &__container {
@@ -27,7 +27,7 @@
   }
 
   &__nav-list {
-    margin-right: 47px;
+    margin-right: 50px;
 
     @include small-desktop {
       margin-right: 15px;
@@ -119,8 +119,8 @@
 
       --burger-line-height: 2px;
 
-      top: -23px;
-      right: 22px;
+      top: -14px;
+      left: -29px;
 
       &::after {
         left: 0;
@@ -128,7 +128,7 @@
 
       &::after,
       &::before {
-        width: 60%;
+        width: 70%;
       }
     }
   }
