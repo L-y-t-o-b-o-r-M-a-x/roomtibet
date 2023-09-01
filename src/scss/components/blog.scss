@@ -1,0 +1,143 @@
+.blog {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 24px 10px;
+
+  &__item {
+    height: auto;
+    box-sizing: border-box;
+  }
+
+  &__card {
+    @include flex;
+
+    column-gap: 24px;
+    max-width: 580px;
+    padding: 17px 16px 14px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background-color: var(--white);
+
+    @include tablet {
+      flex-direction: column;
+    }
+
+    // @include small-tablet {
+    //   flex-direction: column;
+    // }
+  }
+
+  &__img-wrap {
+    min-width: 230px;
+    height: 280px;
+    border-radius: 6px;
+    background-color: var(--bg-gray);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @include tablet {
+      min-width: 285px;
+      height: 280px;
+    }
+
+    // @include small-tablet {
+    //   min-width: 285px;
+    //   height: 280px;
+    // }
+  }
+
+  &__img-wrap--italy {
+    background-image: url('../img/blog-1.jpg');
+
+    @include small-tablet {
+      background-image: url('../img/blog-1@390.jpg');
+    }
+  }
+
+  &__img-wrap--doubts {
+    background-image: url('../img/blog-2.jpg');
+
+    @include small-tablet {
+      background-image: url('../img/blog-2@390.jpg');
+    }
+  }
+
+  &__img-wrap--journey {
+    background-image: url('../img/blog-3.jpg');
+
+    @include small-tablet {
+      background-image: url('../img/blog-3@390.jpg');
+    }
+  }
+
+  &__img-wrap--india {
+    background-image: url('../img/blog-4.jpg');
+
+    @include small-tablet {
+      background-image: url('../img/blog-4@390.jpg');
+    }
+  }
+
+
+  &__content {
+    @include flex-column;
+
+    row-gap: 24px;
+    width: 100%;
+    max-width: 294px;
+    padding: 18px 0 13px;
+
+    @include tablet {
+      min-height: 270px;
+      flex-grow: 1;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    color: var(--dark-purple);
+  }
+
+  &__text {
+    overflow: hidden;
+    display: -webkit-box;
+    max-width: 294px;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    margin: 0;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--dark-purple);
+  }
+
+  &__info {
+    @include flex-sb;
+
+    margin-top: auto;
+  }
+
+  &__date {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--yellow);
+  }
+
+  &__link {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--dark-green);
+  }
+
+  @include big-desktop {
+    @include flex;
+    column-gap: 0;
+  }
+
+}

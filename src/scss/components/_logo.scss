@@ -6,4 +6,9 @@
     width: 84px;
     height: 44px;
   }
+
+  &:focus {
+    outline: 1px solid var(--yellow);
+    outline-offset: 3px;
+  }
 }

@@ -1,0 +1,52 @@
+.list-services {
+  &__item {
+    padding-left: 66px;
+    background-position: left;
+    background-size: 50px;
+    background-repeat: no-repeat;
+
+    @include mobile {
+      background-position: top left;
+    }
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 39px;
+
+    @include mobile {
+      margin-bottom: 31px;
+    }
+  }
+
+  &__item--guide {
+    background-image: url('../../img/guide.svg');
+  }
+
+  &__item--prices {
+    background-image: url('../../img/safe.svg');
+  }
+
+  &__item--safe {
+    background-image: url('../../img/prices.svg');
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 5px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0.216px;
+    color: var(--dark-purple);
+  }
+
+  &__text {
+    max-width: 514px;
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: var(--black);
+  }
+
+}

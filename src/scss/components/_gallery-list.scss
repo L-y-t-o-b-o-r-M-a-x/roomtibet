@@ -1,0 +1,43 @@
+.gallery-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-self: end;
+  gap: 10px;
+
+  &__item {
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &__item--tea {
+    border-radius: 0 50px;
+    background-image: url('../../img/offer-gallery-1.jpg');
+  }
+
+  &__item--gid {
+    border-radius: 50px 0;
+    background-image: url('../../img/offer-gallery-2.jpg');
+  }
+
+  &__item--snow {
+    border-radius: 50px 0;
+    background-image: url('../../img/offer-gallery-3.jpg');
+  }
+
+  &__item--valley {
+    border-radius: 0 50px;
+    background-image: url('../../img/offer-gallery-4.jpg');
+  }
+
+  @include small-desktop {
+    column-gap: 50px;
+  }
+
+  @include mobile {
+    display: none;
+  }
+}

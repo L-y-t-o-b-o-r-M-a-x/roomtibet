@@ -12,7 +12,7 @@
     right: 0;
     top: 0;
     bottom: 0;
-    z-index: 3;
+    z-index: 4;
     background-image: url('../../img/video-1.jpg');
     background-position: center;
     background-size: cover;
@@ -25,6 +25,18 @@
     right: 0;
     bottom: 65px;
     z-index: 2;
+
+    @include tablet {
+      bottom: 0;
+    }
+
+    @include small-tablet {
+      bottom: 50px;
+    }
+
+    @include mobile {
+      display: none;
+    }
   }
 
   &--bottom {
@@ -32,6 +44,11 @@
     left: 130px;
 
     @include small-desktop {
+      left: 50px;
+    }
+
+    @include tablet {
+      top: 0;
       left: 0;
     }
   }
@@ -87,6 +104,15 @@
       visibility: hidden;
     }
 
+    &:focus {
+      outline: 1px solid var(--yellow);
+      outline-offset: 3px;
+    }
+
+    @include mobile {
+      left: 49%;
+    }
+
   }
 
   &__content {
@@ -96,5 +122,11 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+
+  @include mobile {
+    width: 358px;
+    height: 416px;
+
   }
 }

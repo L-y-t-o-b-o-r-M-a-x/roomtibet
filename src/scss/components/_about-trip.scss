@@ -1,0 +1,76 @@
+.about-trip {
+  padding-top: 165px;
+  padding-bottom: 160px;
+
+  &__container {
+    @include flex-sb;
+
+    @include tablet {
+      flex-direction: column-reverse;
+      align-items: center;
+      row-gap: 40px;
+    }
+
+    @include small-tablet {
+      row-gap: 60px;
+    }
+
+    @include mobile {
+      row-gap: 40px;
+    }
+  }
+
+  &__video {
+    position: relative;
+    display: flex;
+
+    @include tablet {
+      width: 100%;
+    }
+
+    @include mobile {
+      justify-content: center;
+    }
+  }
+
+  &__video-block {
+    position: absolute;
+  }
+
+  &__content {
+    @include flex-column;
+
+    max-width: 580px;
+
+  }
+
+  &__title {
+    @include mobile {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__text {
+    @include mobile {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__btn {
+    align-self: flex-start;
+
+    @include mobile {
+      align-self: center;
+    }
+  }
+
+  @include tablet {
+    padding-top: 65px;
+    padding-bottom: 50px;
+  }
+
+  @include mobile {
+    padding-top: 50px;
+  }
+
+}
